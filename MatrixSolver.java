@@ -1,8 +1,9 @@
-
+import java.util.*;
+import java.util.Scanner;
 /**
  * Write a description of class MatrixSolver here.
  *
- * @author (your name)
+ * @author (Gabriel Alirio Maldonado, Tyler Streets)
  * @version (a version number or a date)
  */
 public class MatrixSolver
@@ -12,31 +13,30 @@ public class MatrixSolver
     public int matrixB[][];
     public int [][] nonReduced;
      
-    public int rowVector1[];
-    public int rowVector2[];
-    public int addedRowVector[];
-    public int addedMatrix[][];
+    
     /**
      * Constructor for objects of class Matrices
      */
-    public MatrixSolver()
+        public MatrixSolver()
     {
-        rowVector1 = new int[] {3,1,2};
-        rowVector2 = new int[] {1,4,0};
-        int matrixA[][] = {rowVector1,rowVector1,rowVector1}; 
-        int matrixB[][] = {{1,1,1},{2,2,2},{3,3,3}};
-        nonReduced = new int[3][3];
-        
-        
-        addedRowVector = addMatrix(rowVector1, rowVector2);
-        int addedMatrix [][] = {addedRowVector,addedRowVector,addedRowVector};
-        printMatrix(addedMatrix);
+      int rowVector[];
+      int addedRowVector[];
+      int addedMatrix[][];
+      
     }
     
     public static void main(String [] args){
+        MatrixSolver solver = new MatrixSolver();
+        Scanner in= new Scanner(System.in);
+        System.out.println("Matrix Solver v1 n/" + "Enter the length of the row vectors");
+        int x = in.nextInt();
+        if(!in.hasNextInt()) {
+           System.out.println("Not an integer, please try again");
+            in.next();
+        } else{
+            
+        }
         
-        System.out.println("Matrix Solver v1 n/" + "Enter the first row vector");
-       
     }
 
     public void printMatrix(int [] [] x)
